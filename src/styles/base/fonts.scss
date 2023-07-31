@@ -1,0 +1,55 @@
+@font-face {
+	font-family: Noto Sans SC;
+	src: url('../fonts/NotoSansSC_Bold/NotoSansSC_Bold.eot');
+	src: local('NotoSansSC_Bold'), local('../fonts/NotoSansSC_Bold/NotoSansSC_Bold'),
+		url('../fonts/NotoSansSC_Bold/NotoSansSC_Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/NotoSansSC_Bold/NotoSansSC_Bold.woff') format('woff'),
+		url('../fonts/NotoSansSC_Bold/NotoSansSC_Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: Noto Sans SC;
+	src: url('../fonts/NotoSansSC_Regular/NotoSansSC_Regular.eot');
+	src: local('NotoSansSC_Regular'), local('../fonts/NotoSansSC_Regular/NotoSansSC_Regular'),
+		url('../fonts/NotoSansSC_Regular/NotoSansSC_Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/NotoSansSC_Regular/NotoSansSC_Regular.woff') format('woff'),
+		url('../fonts/NotoSansSC_Regular/NotoSansSC_Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: Noto Sans TC;
+	src: url('../fonts/NotoSansSC_Regular/NotoSansTC_Regular.eot');
+	src: local('NotoSansTC_Regular'), local('../fonts/NotoSansTC_Regular/NotoSansTC_Regular'),
+		url('../fonts/NotoSansTC_Regular/NotoSansTC_Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/NotoSansTC_Regular/NotoSansTC_Regular.woff') format('woff'),
+		url('../fonts/NotoSansTC_Regular/NotoSansTC_Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: Styrene A LC Web;
+	src: url('../fonts/NotoSansSC_Regular/StyreneAWeb_Bold.eot');
+	src: local('StyreneAWeb_Bold'), local('../fonts/StyreneAWeb_Bold/StyreneAWeb_Bold'),
+		url('../fonts/StyreneAWeb_Bold/StyreneAWeb_Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/StyreneAWeb_Bold/StyreneAWeb_Bold.woff') format('woff'),
+		url('../fonts/StyreneAWeb_Bold/StyreneAWeb_Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: Styrene A LC Web;
+	src: url('../fonts/StyreneAWeb_Regular/StyreneAWeb_Regular.eot');
+	src: local('StyreneAWeb_Regular'), local('../fonts/StyreneAWeb_Regular/StyreneAWeb_Regular'),
+		url('../fonts/StyreneAWeb_Regular/StyreneAWeb_Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/StyreneAWeb_Regular/StyreneAWeb_Regular.woff') format('woff'),
+		url('../fonts/StyreneAWeb_Regular/StyreneAWeb_Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}

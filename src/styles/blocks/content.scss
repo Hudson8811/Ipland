@@ -1,0 +1,141 @@
+.content {
+	margin-top: 116px;
+	@media (max-width: 767px){
+		margin-top: 40px;
+	}
+	@media (max-width: 479px){
+		margin-top: 20px;
+	}
+	&__sec {
+	}
+	&__sec-lines {
+		margin-top: 44px;
+		@media (max-width: 767px){
+			margin-top: 40px;
+		}
+		.content__subsec {
+			margin-bottom: 48px;
+			@media (max-width: 767px){
+				margin-bottom: 40px;
+			}
+		}
+		.content__subtitle {
+			margin-bottom: 28px;
+			@media (max-width: 767px){
+				margin-bottom: 20px;
+			}
+		}
+		.content__text {
+			margin-top: 16px;
+			padding-top: 16px;
+			border-top: 2px solid #CEECFF;
+		}
+	}
+	&__title {
+		color: var(--orange, #F04E00);
+		font-family: Noto Sans SC;
+		font-size: 48px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 116.667%;
+		letter-spacing: 2.88px;
+		margin-bottom: 32px;
+		@media (max-width: 767px){
+			font-size: 36px;
+			line-height: 155%;
+			margin-bottom: 20px;
+		}
+	}
+	&__text {
+		color: var(--black, #000);
+		font-family: Noto Sans SC;
+		font-size: 28px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 142.857%; 
+		@media (max-width: 767px){
+			font-size: 24px;
+			line-height: 133.333%; 
+		}
+	}
+	&__sec-colored {
+		margin-top: 36px;
+		padding: 36px 0 56px;
+		position: relative;
+		@media (max-width: 767px){
+			margin-top: 24px;
+			padding: 24px 0 40px;
+		}
+		&::before{
+			content:'';
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 100%;
+			background: var(--blue, #CEECFF);
+		}
+		.content__sec {
+			margin-top: 60px;
+			@media (max-width: 767px){
+				margin-top: 40px;
+			}
+			&:first-child{
+				margin: 0;
+			}
+		}
+		.content__text-small {
+			margin-top: 24px;
+		}
+	}
+	&__list {
+	}
+	&__item {
+		color: var(--black, #000);
+		font-family: Noto Sans SC;
+		font-size: 28px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 142.857%;
+		position: relative;
+		display: flex;
+		align-items: center;
+		&::before{
+			content:'';
+			width: 6px;
+			height: 6px;
+			background-color: #000000;
+			display: inline-block;
+			margin: 0 16px;
+			border-radius: 50%;
+		}
+	}
+	&__text-small {
+		color: var(--black, #000);
+		font-family: Noto Sans SC;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 175%;
+		@media (max-width: 767px){
+			font-size: 15px;
+		}
+		span {
+			font-family: Styrene A LC Web;
+		}
+	}
+	&__subsec {
+	}
+	&__subtitle {
+		color: var(--black, #000);
+		font-family: Noto Sans SC;
+		font-size: 28px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 157.143%;
+		@media (max-width: 767px){
+			font-size: 24px;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	.main {
+		flex: 1 1 auto;
+	}
+}
+.container{
+	width: 1040px;
+	padding: 0 40px;
+	margin: 0 auto;
+	max-width: 100%;
+	@media (max-width: 1372px){
+		width: 100%;
+	}
+	@media (max-width: 767px){
+		padding: 0 20px;
+	}
+}
