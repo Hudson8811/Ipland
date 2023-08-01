@@ -15,7 +15,7 @@ $(document).ready(function() {
 		if ($(window).width() > 478 && $(window).width() < 767) {
 			
 			$('html, body').animate({
-				scrollTop: $(href).offset().top - 145
+				scrollTop: $(href).offset().top - 110
 			}, {
 				duration: 300,
 				easing: "linear"
@@ -23,7 +23,7 @@ $(document).ready(function() {
 		}else if ($(window).width() < 479) {
 			
 			$('html, body').animate({
-				scrollTop: $(href).offset().top - 78
+				scrollTop: $(href).offset().top - 50
 			}, {
 				duration: 300,
 				easing: "linear"
@@ -31,7 +31,7 @@ $(document).ready(function() {
 		}else {
 			
 			$('html, body').animate({
-				scrollTop: $(href).offset().top - 170
+				scrollTop: $(href).offset().top - 120
 			}, {
 				duration: 300,
 				easing: "linear"
@@ -40,5 +40,30 @@ $(document).ready(function() {
 
 		return false;
 	});
+
+	$(".scroll-to-sec").each(function (i) {
+		$(this).prop("id", "scroll-to-sec" + i);
+	});
+	$(".menu-header__link").each(function (i) {
+		$(this).prop("id", "menu-header__link" + i);
+	});
+	$(".menu-header__link").each(function (i) {
+		$(this).prop("href", "#scroll-to-sec" + i);
+	});
+
+	$(document).on('scroll', function() {
+		var $sections = $('.scroll-to-sec');
+		$sections.each(function(i,el){
+			var top  = $(el).offset().top-$(window).height() / 1.8;
+			var bottom = top + $(el).height();
+			var scroll = $(window).scrollTop();
+			var id = $(el).attr('id');
+			if( scroll > top && scroll < bottom){
+				$('a.menu-header__link').removeClass('js-active');
+				$('a[href="#'+id+'"]').addClass('js-active');
+			}
+		})
+	});
 })
+
 
