@@ -145,6 +145,9 @@
 		}
 		&.js-active{
 			color: var(--black, #F04E00);
+			span {
+				border-bottom: 2px solid transparent;
+			}
 		}
 	}
 }
