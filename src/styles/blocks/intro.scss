@@ -27,21 +27,12 @@
 		}
 	}
 	&__logo {
-		max-width: 61%;
-		@media (max-width: 1372px){
-			max-width: 50%;
-		}
-		@media (max-width: 1199px){
-			max-width: 64%;
-		}
-		@media (max-width: 999px){
-			max-width: 84%;
-		}
+		max-width: 645px;
 		@media (max-width: 767px){
-			max-width: 73%;
+			max-width: 78.638%;
 		}
 		@media (max-width: 479px){
-			max-width: 90%;
+			max-width: 100%;
 		}
 		img {
 			width: 100%;

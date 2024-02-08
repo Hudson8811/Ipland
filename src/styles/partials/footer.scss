@@ -99,7 +99,6 @@
 		}
 		a {
 			border-bottom: 2px solid #ffffff;
-			margin-left: 8px;
 			display: inline-block;
 			color: var(--black, #000);
 			font-family: Styrene A LC Web;
@@ -111,6 +110,9 @@
 			&:hover{
 				color: var(--orange, #F04E00);
 				border-bottom: 2px solid transparent;
+			}
+			&:not(:first-child){
+				margin-left: 8px;
 			}
 		}
 	}
@@ -149,12 +151,15 @@
 	}
 	&__logo {
 		flex: 1 1 auto;
-		max-width: 308px;
-		@media (max-width: 767px){
-			max-width: 292px;
+		max-width: 355px;
+		@media (max-width: 1371px){
+			max-width: 299px;
+		}
+		@media (max-width: 999px){
+			max-width: 299px;
 		}
 		@media (max-width: 479px){
-			max-width: 220px;
+			max-width: 209px;
 		}
 		img {
 			width: 100%;
