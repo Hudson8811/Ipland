@@ -42,7 +42,7 @@
 		display: flex;
 		@media (max-width: 1199px){
 			flex-wrap: wrap;
-			row-gap: 36px;
+			row-gap: 60px;
 		}
 		@media (max-width: 767px){
 			margin-top: 20px;
@@ -51,6 +51,7 @@
 		}
 	}
 	&__column {
+		position: relative;
 		flex: 0 0 25%;
 		display: flex;
 		flex-direction: column;
@@ -60,7 +61,33 @@
 		@media (max-width: 767px){
 			flex: 0 1 100%;
 		}
+		&--white {
+			&:before {
+				content: "";
+				width: 234px;
+				height: calc(100% + 40px);
+				position: absolute;
+				top: -20px;
+				left: -20px;
+				background-color: #fff;
+				z-index: 0;
+				@media (max-width: 1199px){
+					width: 254px;
+					left: -40px;
+				}
+				@media (max-width: 767px){
+					content: none;
+				}
+			}
+			.top-footer__bottom a {
+				border-bottom: 2px solid #ABD9FE;
+				@media (max-width: 767px){
+					border-bottom: 2px solid #fff;
+				}
+			}
+		}
 		&-title {
+			position: relative;
 			color: #000;
 			font-family: Noto Sans SC;
 			font-size: 18px;
@@ -69,13 +96,16 @@
 			line-height: 177.778%;
 		}
 		&-list {
+			position: relative;
 			margin-top: 20px;
 			flex: 1 1 auto;
+			max-height: 96px;
 			@media (max-width: 767px){
 				margin-top: 16px;
 			}
 		}
 		&-item {
+			position: relative;
 			color: #000;
 			font-family: Noto Sans SC;
 			font-size: 18px;
@@ -84,8 +114,49 @@
 			line-height: 177.778%;
 		}
 	}
-	&__bottom  {
+	&__contacts {
+		position: relative;
 		margin-top: 20px;
+		&:before {
+			content: none;
+			width: 234px;
+			height: calc(100% + 15px);
+			position: absolute;
+			top: -5px;
+			left: -20px;
+			background-color: #fff;
+			z-index: 0;
+			@media (max-width: 767px){
+				content: "";
+			}
+		}
+	}
+	&__contact {
+		position: relative;
+		display: flex;
+		align-items: center;
+		svg {
+			width: 24px;
+			height: 24px;
+			margin-right: 12px;
+		}
+		a {
+			color: var(--black, #000);
+			font-family: Styrene A LC Web;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 177.778%;
+			transition: all 0.3s ease 0s;
+			&:hover{
+				color: var(--orange, #F04E00);
+			}
+		}
+	}
+	&__bottom  {
+		position: relative;
+		margin-top: 20px;
+		padding-bottom: 15px;
 		@media (max-width: 767px){
 			margin-top: 16px;
 		}
