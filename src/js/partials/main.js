@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 		let href = $(this).attr('href');
 		
-		if ($(window).width() > 478 && $(window).width() < 767) {
+		if ($(window).width() > 478 && $(window).width() < 768) {
 			
 			$('html, body').animate({
 				scrollTop: $(href).offset().top - 110
@@ -31,7 +31,7 @@ $(document).ready(function() {
 		}else {
 			
 			$('html, body').animate({
-				scrollTop: $(href).offset().top - 120
+				scrollTop: href == '#scroll-to-sec5' ? $(href).offset().top - 120 : $(href).offset().top - 155
 			}, {
 				duration: 300,
 				easing: "linear"
@@ -52,17 +52,31 @@ $(document).ready(function() {
 	});
 
 	$(document).on('scroll', function() {
-		var $sections = $('.scroll-to-sec');
-		$sections.each(function(i,el){
-			var top  = $(el).offset().top-$(window).height() / 1.8;
-			var bottom = top + $(el).height();
+		var sections = $('.scroll-to-sec');
+
+		for(let i = 0; i < sections.length; i++) {
 			var scroll = $(window).scrollTop();
-			var id = $(el).attr('id');
-			if( scroll > top && scroll < bottom){
-				$('a.menu-header__link').removeClass('js-active');
-				$('a[href="#'+id+'"]').addClass('js-active');
+			var top  = $(sections[i]).offset().top-$(window).height() / 1.8;
+			var bottom = top + $(sections[i]).height();
+			var id = $(sections[i]).attr('id');
+			var topToWindow = $(sections[i]).offset().top - scroll;
+
+			if($(sections[i]).height() > $(window).height() ) {
+				if(scroll > top && scroll < bottom){
+					$('a.menu-header__link').removeClass('js-active');
+					$('a[href="#'+id+'"]').addClass('js-active');
+					break
+				}
+			} else {
+				if(topToWindow + $(sections[i]).height() / 3 > 0){
+					$('a.menu-header__link').removeClass('js-active');
+					$('a[href="#'+id+'"]').addClass('js-active');
+					break
+				}
 			}
-		})
+			
+		}
+
 	});
 })
 
