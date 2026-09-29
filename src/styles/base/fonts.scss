@@ -33,8 +33,9 @@
 }
 @font-face {
 	font-family: Styrene A LC Web;
-	src: url('../fonts/NotoSansSC_Regular/StyreneAWeb_Bold.eot');
+	src: url('../fonts/StyreneAWeb_Bold/StyreneAWeb_Bold.eot');
 	src: local('StyreneAWeb_Bold'), local('../fonts/StyreneAWeb_Bold/StyreneAWeb_Bold'),
+		url('../fonts/StyreneAWeb_Bold/StyreneALC_Bold.woff2') format('woff2'),
 		url('../fonts/StyreneAWeb_Bold/StyreneAWeb_Bold.eot?#iefix') format('embedded-opentype'),
 		url('../fonts/StyreneAWeb_Bold/StyreneAWeb_Bold.woff') format('woff'),
 		url('../fonts/StyreneAWeb_Bold/StyreneAWeb_Bold.ttf') format('truetype');
@@ -46,6 +47,7 @@
 	font-family: Styrene A LC Web;
 	src: url('../fonts/StyreneAWeb_Regular/StyreneAWeb_Regular.eot');
 	src: local('StyreneAWeb_Regular'), local('../fonts/StyreneAWeb_Regular/StyreneAWeb_Regular'),
+		url('../fonts/StyreneAWeb_Regular/StyreneALC_Regular.woff2') format('woff2'),
 		url('../fonts/StyreneAWeb_Regular/StyreneAWeb_Regular.eot?#iefix') format('embedded-opentype'),
 		url('../fonts/StyreneAWeb_Regular/StyreneAWeb_Regular.woff') format('woff'),
 		url('../fonts/StyreneAWeb_Regular/StyreneAWeb_Regular.ttf') format('truetype');
