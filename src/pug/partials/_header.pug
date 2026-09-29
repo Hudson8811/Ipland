@@ -1,31 +1,45 @@
 header.header
 	.header__top 
-		.header__logo 
-			img(src="images/logo.svg" alt="alt")
-		.header__right 
-			a(href="https://ivanyan.partners/en/") 全球网站
+		if page.lang === 'en'
+			.header__logo.header__logo--en
+				img(src="images/logo-en.svg" alt="Ivanyan & Partners")
+		else
+			.header__logo
+				img(src="images/logo.svg" alt="伊万扬与合伙人律师事务所")
+		nav.header__languages(aria-label="Language selector")
+			if page.lang === 'zh-CN'
+				a.header__language.header__language--active(href="/" lang="zh-CN" aria-current="page") 中文
+			else
+				a.header__language(href="/" lang="zh-CN") 中文
+			if page.lang === 'en'
+				a.header__language.header__language--active(href="en.html" lang="en" aria-current="page") EN
+			else
+				a.header__language(href="en.html" lang="en") EN
 	.header__bottom 
 		.my-container
-			img(src="images/menu-mobile.png" alt="alt").header__burger
-			.header__menu.menu-header
-				img(src="images/menu-mobile-close.png" alt="alt").menu-header__close
-
-				ul.menu-header__list 
-					li.menu-header__item 
-						a.menu-header__link.click(href="")
-							span 专业领域
-					li.menu-header__item 
-						a.menu-header__link.click(href="")
-							span 人员
-					li.menu-header__item 
-						a.menu-header__link.click(href="")
-							span 鉴定
-					li.menu-header__item 
-						a.menu-header__link.click(href="")
-							span 业务规模
-					li.menu-header__item 
-						a.menu-header__link.click(href="")
-							span 精选案例
-					li.menu-header__item 
-						a.menu-header__link.click(href="")
-							span 联系方式
+			button.header__burger(type="button" aria-label="Open menu" aria-expanded="false")
+				img(src="images/menu-mobile.png" alt="")
+			nav.header__menu.menu-header(aria-label="Main menu")
+				.menu-header__panel
+					button.menu-header__close(type="button" aria-label="Close menu")
+						img(src="images/menu-mobile-close.png" alt="")
+					- const menuLabels = page.lang === 'en' ? ['specialisation', 'people', 'expertise', 'scale', 'selected experience', 'contacts'] : ['专业领域', '人员', '鉴定', '业务规模', '精选案例', '联系方式']
+					ul.menu-header__list.menu-header__list--en
+						each label in menuLabels
+							li.menu-header__item
+								a.menu-header__link.click(href="")
+									span= label
+					.menu-header__utilities
+						a.menu-header__utility-link.menu-header__utility-link--hub(href="#knowledge-hub")
+							span= page.lang === 'en' ? 'knowledge hub' : '知识中心'
+							svg.menu-header__utility-arrow(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true")
+								path(d="M15 18L21 12L15 6M21 12L3 12" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+						a.menu-header__utility-link(href="https://ivanyan.partners/en/")
+							span= page.lang === 'en' ? 'global site' : '全球网站'
+							svg.menu-header__utility-arrow(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true")
+								path(d="M15 18L21 12L15 6M21 12L3 12" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+					.menu-header__brand(aria-hidden="true")
+						if page.lang === 'en'
+							img(src="images/logo-footer-en.svg" alt="")
+						else
+							img(src="images/logo-footer.svg" alt="")

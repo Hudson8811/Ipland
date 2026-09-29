@@ -1,9 +1,20 @@
 $(document).ready(function() {
 	$('.header__burger').click(function() {
 		$('.header__menu').addClass('js-active')
+		$('body').addClass('menu-open')
+		$(this).attr('aria-expanded', 'true')
 	})
-	$('.menu-header__close, .menu-header__link').click(function() {
+	$('.menu-header__close, .menu-header__link, .menu-header__utility-link--hub').click(function() {
 		$('.header__menu').removeClass('js-active')
+		$('body').removeClass('menu-open')
+		$('.header__burger').attr('aria-expanded', 'false')
+	})
+	$(document).on('keydown', function(event) {
+		if (event.key === 'Escape') {
+			$('.header__menu').removeClass('js-active')
+			$('body').removeClass('menu-open')
+			$('.header__burger').attr('aria-expanded', 'false')
+		}
 	})
 
 
@@ -12,18 +23,10 @@ $(document).ready(function() {
 
 		let href = $(this).attr('href');
 		
-		if ($(window).width() > 478 && $(window).width() < 768) {
+		if ($(window).width() <= 767) {
 			
 			$('html, body').animate({
-				scrollTop: $(href).offset().top - 110
-			}, {
-				duration: 300,
-				easing: "linear"
-			});
-		}else if ($(window).width() < 479) {
-			
-			$('html, body').animate({
-				scrollTop: $(href).offset().top - 50
+				scrollTop: $(href).offset().top - 88
 			}, {
 				duration: 300,
 				easing: "linear"

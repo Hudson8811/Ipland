@@ -27,7 +27,7 @@
 		}
 		.content__text {
 			margin-top: 16px;
-			padding-top: 16px;
+			padding-top: 14px;
 			border-top: 2px solid #CEECFF;
 		}
 	}
@@ -117,7 +117,7 @@
 		font-size: 16px;
 		font-style: normal;
 		font-weight: 400;
-		line-height: 175%;
+		line-height: 125%;
 		@media (max-width: 767px){
 			font-size: 15px;
 		}
@@ -136,6 +136,43 @@
 		line-height: 157.143%;
 		@media (max-width: 767px){
 			font-size: 24px;
+		}
+	}
+}
+
+
+.content--en{
+	.content__title{
+		font-size:40px;
+		font-family: Styrene A LC Web;
+		letter-spacing:0;
+		@media (max-width: 767px){
+			font-size:24px;
+			line-height:28px;
+		}
+	}
+	.content__text{
+		font-size:24px;
+		line-height:32px;
+		font-family: Styrene A LC Web;
+		@media (max-width: 767px){
+			font-size:16px;
+			line-height:24px;
+		}
+	}
+	.content__item{
+		font-family: Styrene A LC Web;
+		font-size:24px;
+		line-height:32px;
+		@media (max-width: 767px){
+			font-size:16px;
+			line-height:24px;
+		}
+	}
+	.content__sec-lines .content__subtitle{
+		font-family: Styrene A LC Web;
+		@media (max-width: 767px){
+			font-size:20px;
 		}
 	}
 }
